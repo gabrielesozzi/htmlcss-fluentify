@@ -1,3 +1,4 @@
+/* Layout */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,6 @@
 .container {
   width: 90%;
   margin: 0 auto;
-  /* background-color: blue; */
 }
 
 .container:after {
@@ -25,15 +25,19 @@
 [class$="50"] {
   width: calc(100% / 2);
   float: left;
-
-
 }
 
+/* Font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
 header {
   background-color: #0C325A;
   background-image: url("../img/background-header.png");
   height: 500px;
-  background-position: right bottom;
+  background-position: 114% 100%;
   background-repeat: no-repeat;
   background-size: 70%;
 }
@@ -52,7 +56,7 @@ ul {
 
 ul li {
   display: inline-block;
-  padding: 5px;
+  padding-left: 25px;
 }
 
 ul li a {
@@ -62,16 +66,15 @@ ul li a {
   font-size: 12px;
 }
 
-.right_side {
-  display: inline-block;
-  float: right;
-}
-
 .left_side {
   display: inline-block;
 }
 
-img {
+.right_side {
+ float: right;
+}
+
+.left_side>img {
   vertical-align: middle;
   margin-left: 10px;
 }
@@ -82,6 +85,43 @@ img {
   padding-top: 5%;
 }
 
+.jumbo > span {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: relative;
+  top: 50px;
+}
+
+/* Buttons */
+.btn_green {
+  border: 1px solid #7CBB02;
+  padding: 10px 10px;
+  background-color: #7CBB02;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+.btn_login {
+  border: 1px solid #FFFFFF;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.bt_big {
+  padding: 20px 10px;
+}
+
+.bt_footer {
+  margin-left: 30px;
+}
+
+.bt_help {
+ position: fixed;
+ bottom: 0;
+ right: 240px;
+}
+
+/* Banner */
 .banner {
  background-color: #D3D3D3;
  padding-top: 30px;
@@ -89,7 +129,7 @@ img {
  text-align: center;
 }
 
-.banner h2 {
+.banner h2{
   color: #000000;
   padding-bottom: 8px;
 }
@@ -103,18 +143,11 @@ img {
   padding-bottom: 22px;
 }
 
-h3 {
+.content_title {
   text-align: center;
   padding-bottom: 15px;
-}
-
-.hr_content {
-  width: 20%;
-  height: 3px;
-  background-color: #969696;
-  position: relative;
-  left: 40%;
-  border-radius: 10%;
+  color: #7CBB02;
+  font-size: 28px;
 }
 
 .content_text {
@@ -125,6 +158,14 @@ h3 {
   text-align: center;
 }
 
+.hr_content {
+  width: 20%;
+  height: 3px;
+  background-color: #969696;
+  position: relative;
+  left: 40%;
+}
+
 hr {
   margin-top: 40px;
 }
@@ -133,15 +174,41 @@ hr {
   margin-left: 50px;
 }
 
+.text_level h1 {
+  padding-bottom: 10px;
+}
+
+.text_level p {
+  padding-bottom: 20px;
+}
+
 #mountain_img {
   margin-bottom: 50px;
 }
 
+/* Footer */
 footer {
   background-color: #D3D3D3;
   padding: 50px 15px;
+  height: 140px;
 }
 
 span {
   padding-right: 40px;
+}
+
+#selection {
+  border-bottom: 1px solid #969696;
+}
+
+#selection:after {
+  	content: "\25BC";
+    color: #969696;
+    padding-left: 10%;
+}
+
+span a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
